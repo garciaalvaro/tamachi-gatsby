@@ -1,0 +1,30 @@
+/**
+ * ToggleButton
+ */
+
+.container
+	width 6rem
+	height 6rem
+	padding 1rem
+	display none
+	fill currentColor
+	align-items center
+	justify-content center
+	top 0
+	left 0
+	position absolute
+	z-index 100
+	opacity .7
+	transition opacity .2s $e_standard
+
+	&.is_open
+		z-index 200
+
+	&:hover
+		transition opacity .2s $e_deceleration
+		opacity .4
+
+@media screen and (max-width: 768px)
+
+	.container
+		display flex

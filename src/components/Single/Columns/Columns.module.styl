@@ -1,0 +1,12 @@
+/**
+ * Columns
+ */
+
+.container
+	display grid
+	grid-template-columns repeat(auto-fit, minmax(0, 1fr))
+
+@media screen and (max-width: 600px)
+
+	.responsive
+		grid-template-columns 1fr

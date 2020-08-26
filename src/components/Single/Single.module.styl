@@ -1,0 +1,19 @@
+/**
+ * Single
+ */
+
+@import "_header.module"
+@import "_content.module"
+
+.container
+	max-width 90rem
+	padding $layout_padding
+	min-height 100vh
+	display flex
+	flex-direction column
+	word-wrap break-word
+
+@media screen and (max-width: 768px)
+
+	.container
+		word-wrap break-all

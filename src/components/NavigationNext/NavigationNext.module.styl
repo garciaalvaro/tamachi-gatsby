@@ -1,0 +1,36 @@
+/**
+ * Navigation Next
+ */
+
+.container
+	padding-top 15rem
+	display flex
+	flex-direction row
+	flex-flow row wrap
+	margin-top auto
+
+.label
+	text-transform lowercase
+	width 100%
+
+.link
+	position relative
+	font-family 'Roboto Condensed'
+	font-size 3rem
+	line-height 1.2
+	font-weight 400
+
+	&:before
+		position absolute
+		content ""
+		opacity .3
+		bottom -.1rem
+		left 0
+		width 100%
+		height 0
+		background-color currentColor
+		transition opacity .15s $e_standard, height .15s $e_deceleration
+
+	&:hover:before
+		opacity .5
+		height .5rem

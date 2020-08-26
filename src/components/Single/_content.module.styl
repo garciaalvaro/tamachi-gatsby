@@ -1,0 +1,105 @@
+/**
+ * Single content
+ */
+
+.content
+	border-top .2rem solid
+	padding-top $paragraph_margint
+	padding-bottom 6rem
+
+	:global(.gatsby-resp-image-image)
+		transition opacity .3s $e_standard!important
+		height auto!important
+
+	:global(.gatsby-resp-image-wrapper)
+		width 100%
+
+	p code
+		font-size .85em
+		padding .3em .5em
+		position relative
+
+		&:before
+			content ""
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background-color currentColor
+			opacity .1
+
+	li code
+		font-size .85em
+		padding .3em .5em
+		position relative
+
+		&:before
+			content ""
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background-color currentColor
+			opacity .1
+
+	p
+	hr
+	ul
+		margin 0
+		margin-top $paragraph_margint
+
+		&:first-child
+			margin-top 0
+
+	> figure
+	> hr
+	> a
+	> div
+	> span
+	> h1
+	> h2
+	> h3
+	> h4
+	> h5
+	> h6
+		margin 0
+		margin-top $paragraph_margint
+
+		&:first-child
+			margin-top 0
+
+	a
+		position relative
+
+		&:before
+			position absolute
+			content ""
+			opacity .3
+			bottom -.1rem
+			left 0
+			width 100%
+			height .3rem
+			background-color currentColor
+			transition opacity .15s $e_standard, height .15s $e_deceleration
+
+		&:hover:before
+			opacity .5
+			height .5rem
+
+	ul
+	ol
+		padding-left 2rem
+
+@media screen and (max-width: 600px)
+
+	.content
+
+		:global(.gatsby-resp-image-wrapper)
+
+			+ :global(.gatsby-resp-image-wrapper)
+				margin-top 2 * $paragraph_margint
+
+			&:first-child
+				margin-top 0

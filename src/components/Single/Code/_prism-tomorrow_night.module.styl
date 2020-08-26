@@ -1,0 +1,96 @@
+/**
+ * prism.js tomorrow night for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ */
+
+$Background = #1d1f21
+$CurrentLine = #282a2e
+$Selection = #373b41
+$Foreground = #c5c8c6
+$Comment = #969896
+$Red = #cc6666
+$Orange = #de935f
+$Yellow = #f0c674
+$Green = #b5bd68
+$Aqua = #8abeb7
+$Blue = #81a2be
+$Purple = #b294bb
+
+.prism-tomorrow_night
+
+	pre
+		color $Red
+		background $Background
+		font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+
+		::-moz-selection
+			background $Selection
+
+		::selection
+			background $Selection
+
+	:global(.token)
+
+		&:global(.plain-text)
+			color $Foreground
+
+		&:global(.comment)
+		&:global(.block-comment)
+		&:global(.prolog)
+		&:global(.doctype)
+		&:global(.cdata)
+			color $Comment
+
+		&:global(.property)
+		&:global(.tag)
+		&:global(.attr-name)
+		&:global(.namespace)
+		&:global(.deleted)
+		&:global(.variable)
+			color $Red
+
+		&:global(.function-name)
+		&:global(.boolean)
+		&:global(.number)
+		&:global(.function)
+			color $Blue
+
+		&:global(.inserted)
+		&:global(.class-name)
+			color $Yellow
+
+		&:global(.delimiter)
+		&:global(.symbol)
+			color $Orange
+
+		&:global(.selector)
+		&:global(.important)
+		&:global(.atrule)
+		&:global(.keyword)
+		&:global(.builtin)
+			color $Purple
+
+		&:global(.string)
+		&:global(.char)
+		&:global(.attr-value)
+		&:global(.regex)
+			color $Green
+
+		&:global(.operator)
+			color $Aqua
+
+		&:global(.punctuation)
+		&:global(.constant)
+		&:global(.entity)
+		&:global(.url)
+			color $Foreground
+
+		&:global(.important)
+		&:global(.bold)
+			font-weight bold
+
+		&:global(.italic)
+			font-style italic
+
+		&:global(.entity)
+			cursor help

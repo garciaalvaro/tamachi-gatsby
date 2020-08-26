@@ -1,0 +1,25 @@
+/**
+ * ToggleButton
+ */
+
+.container
+	width 4rem
+	height 4rem
+	margin-top .2rem
+	display flex
+	fill currentColor
+	align-items center
+	justify-content center
+	position absolute
+	top 1rem
+	right 4.5rem
+	z-index 100
+	opacity .7
+	transition opacity .2s $e_standard
+
+	&.is_open
+		z-index 200
+
+	&:hover
+		transition opacity .2s $e_deceleration
+		opacity .4

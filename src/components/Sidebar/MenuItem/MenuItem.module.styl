@@ -1,0 +1,65 @@
+/**
+ * MenuItem
+ */
+
+.container
+
+	&::selection
+		background transparent
+
+.button
+	display flex
+	width 2.2em
+	align-items center
+	justify-content center
+
+.header
+	flex-direction row
+	display flex
+	position relative
+	transition transform .2s $e_deceleration
+
+	&:before
+		content ""
+		position absolute
+		top 0
+		left 0
+		width .1rem
+		height 100%
+		border-left .1rem solid
+		opacity .2
+
+	&:hover
+		transform translateX(-.4rem)
+
+	&.is_active
+		font-weight 500
+		font-style italic
+
+		&:hover
+			transform none
+
+	&.is_root:before
+		content normal
+
+	&.is_active:before
+	&.sibling_is_active:before
+		border-left .2rem solid
+		opacity .7
+
+.link
+	align-items center
+	justify-content space-between
+	display flex
+	flex 1
+	width 100%
+	padding .8em 1.1em
+
+	div&
+		cursor default
+
+	a&
+		cursor pointer
+
+	span
+		flex 1 0 0

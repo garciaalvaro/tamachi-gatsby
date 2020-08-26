@@ -1,0 +1,20 @@
+/**
+ * ColorSchemeToggle
+ */
+
+.container
+	width 4rem
+	height 4rem
+	display flex
+	fill currentColor
+	align-items center
+	justify-content center
+	position absolute
+	top 1rem
+	right 1rem
+	opacity .7
+	transition opacity .2s $e_standard
+
+	&:hover
+		transition opacity .2s $e_deceleration
+		opacity .4

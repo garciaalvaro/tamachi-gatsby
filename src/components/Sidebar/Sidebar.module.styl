@@ -1,0 +1,58 @@
+/**
+ * Sidebar
+ */
+
+.container
+	position relative
+	display flex
+	flex-direction column
+	flex 0 0 $sidebar_width
+	height 100%
+	font-size 1.8rem
+	line-height 1.5
+
+	&:before
+		content ""
+		position absolute
+		top 0
+		left 0
+		width .1rem
+		height 100%
+		background-color currentColor
+		opacity .2
+
+@media screen and (max-width: 1024px)
+
+	.container
+		flex-basis $sidebar_width_responsive
+
+@media screen and (max-width: 768px)
+
+	.container
+		position absolute
+		background-color var(--background_color)
+		width 100%
+		z-index 100
+		animation-name appear
+		animation-duration .1s
+		animation-timing-function $e_deceleration
+
+		&:before
+			content normal
+
+		&.is_closed
+			display none
+
+		&.is_open
+			display block
+			z-index 200
+
+@keyframes appear
+
+	0%
+		opacity 0
+		transform translateZ(0)
+
+	100%
+		opacity 1
+		transform translateZ(0)

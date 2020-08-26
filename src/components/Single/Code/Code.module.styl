@@ -1,0 +1,89 @@
+/**
+ * Code
+ */
+
+@import "_prism-tomorrow_night.module"
+@import "_prism-tomorrow_night-fixes.module"
+
+.container
+	position relative
+	font-family 'Roboto Mono', 'Ubuntu Mono', monospace
+	animation appear_late .8s ease
+	color rgba(255,255,255,.8)
+
+	::selection
+		background rgba(200,200,200,0.3)
+	::-moz-selection
+		background rgba(200,200,200,0.3)
+
+	pre
+		overflow auto
+		tab-size 4
+		hyphens none
+		font-size 1em
+		text-align left
+		white-space pre
+		word-spacing normal
+		word-break normal
+		word-wrap normal
+		font-family inherit
+		font-size inherit
+		position relative
+
+	code
+		min-width 100%
+		display block
+		font-size .85em
+		background none
+		padding 40px 60px
+
+.label
+	position absolute
+	top 0
+	left 0
+	padding 0 .8em
+	font-size .75em
+	font-weight 400
+	color inherit
+	line-height 1.5
+	min-height 2.7em
+	display flex
+	align-items center
+
+.button
+
+	&:focus
+	&:hover
+		opacity .8
+
+	&
+	&:focus
+	&:hover
+		background none
+		box-shadow none
+		outline none
+		border none
+		color inherit
+		position absolute
+		top 0
+		right 0
+		padding 0 .8em
+		text-transform uppercase
+		font-size .75em
+		border-radius 0
+		font-weight 700
+		font-family inherit
+		transition opacity .1s $e_standard
+		cursor pointer
+		line-height 1.5
+		min-height 2.7em
+		display flex
+		align-items center
+
+	&.just-copied
+		text-transform none
+		font-weight 400
+		cursor default
+
+		&:hover
+			opacity 1

@@ -1,0 +1,41 @@
+/**
+ * Result
+ */
+
+.container
+	border-top 0.1rem solid var(--color_01)
+	transition opacity .2s $e_standard
+
+	nav
+		z-index -1
+
+	&:hover
+		background-color var(--color_007)
+
+.content
+	padding $sidebar_paddinglr 6rem
+	display flex
+	flex-direction column
+	transition background-color .2s $e_standard
+	flex 0 0 100%
+	max-width 80rem
+	margin 0 auto
+
+.title
+.body
+	text-overflow ellipsis
+	white-space nowrap
+	overflow hidden
+
+.title + .body
+	margin-top 1.2em
+
+.title
+	margin 0
+	font-size 2.1rem
+	font-weight 600
+	font-family Roboto Condensed
+	text-transform uppercase
+
+.match
+	border-bottom .5rem solid

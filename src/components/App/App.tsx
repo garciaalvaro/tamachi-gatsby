@@ -6,9 +6,11 @@ import React, {
 } from "react";
 
 import "./App.styl";
+import styles from "./App.module.styl";
 import { Context } from "@/context";
 import { ColorSchemeToggle } from "../ColorSchemeToggle";
 import { Search } from "../Search";
+import { className } from "@/utils";
 
 interface Props {
 	is_home: boolean;
@@ -30,7 +32,7 @@ export const App: FunctionComponent<Props> = props => {
 	}
 
 	return (
-		<div id="page" className={`color-${color}`}>
+		<div className={className([styles.container, styles[color]])}>
 			{props.children}
 
 			<ColorSchemeToggle />

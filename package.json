@@ -14,7 +14,8 @@
 		"test": "npm run test:types && npm run test:lint && npm run test:prettier",
 		"test:types": "tsc",
 		"test:lint": "eslint \"{src,content-demo}/**/*.{js,ts,tsx}\" \"*.js\"",
-		"test:prettier": "prettier --write \"{src,types,content-demo}/**/*.{js,ts,tsx}\" \"*.js\""
+		"test:prettier": "prettier --check \"{src,types,content-demo}/**/*.{js,ts,tsx}\" \"*.js\"",
+		"prettier": "prettier --write \"{src,types,content-demo}/**/*.{js,ts,tsx}\" \"*.js\""
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.16",

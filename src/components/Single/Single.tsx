@@ -45,7 +45,7 @@ export const Single: FunctionComponent<Props> = props => {
 							{title}
 						</Link>
 					) : (
-						title
+						<span className={styles.link}>{title}</span>
 					)}
 				</h1>
 			</div>

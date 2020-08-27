@@ -3,5 +3,5 @@ interface ContextProps {
 	setMenu: React.Dispatch<React.SetStateAction<Menu>>;
 	path: string;
 	color: Color;
-	setColor: React.Dispatch<React.SetStateAction<Color>>;
+	setColor: (color: Color) => void;
 }

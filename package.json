@@ -6,9 +6,10 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"develop": "gatsby develop",
-		"build": "gatsby build",
 		"start": "npm run develop",
+		"prebuild": "npm run test",
+		"build": "gatsby build",
+		"develop": "gatsby develop",
 		"serve": "gatsby serve",
 		"test": "npm run test:types && npm run test:lint && npm run test:prettier",
 		"test:types": "tsc",

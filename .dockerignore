@@ -1,0 +1,17 @@
+# Git related files and folders
+.git
+.gitignore
+
+# Documentation
+docs
+
+# dist folder
+dist
+
+# gatsby cache and public folders
+.cache
+public
+
+# npm related files and folders
+package-lock.json
+node_modules

@@ -1,13 +1,11 @@
-FROM node:14.9-alpine
+FROM node:14
 
-# Create app directory that will be the root directory of our project
-RUN mkdir -p /app
-
-# Change working directory, any command from now will run in this directory
-WORKDIR /app
+# Create the folder and change the working directory.
+# Any command from now will run in this directory.
+WORKDIR /usr/src/app
 
 # Copy package.json
-COPY ./package.json .
+COPY package*.json ./
 
 # Install packages
 RUN npm install
@@ -15,10 +13,11 @@ RUN npm install
 # Copy the other files and folders
 COPY . .
 
+# Build the app
+RUN npm run build
+
 # Expose port
 EXPOSE 3000
 
-# Run the npm script which will:
-# - Build the production files
-# - Start the server
-CMD [ "npm", "run", "serve" ]
+# Start the server
+CMD npm run serve

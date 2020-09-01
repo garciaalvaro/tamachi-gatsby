@@ -3,7 +3,7 @@ version: "3.7"
 services:
   tamachi-gatsby:
     build: .
-    image: nodejs:14.9-alpine
+    image: node:14
     container_name: tamachi-gatsby
     restart: unless-stopped
     ports:

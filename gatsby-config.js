@@ -38,6 +38,8 @@ module.exports = {
 			},
 		},
 
+		"gatsby-plugin-zopfli",
+
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
@@ -51,8 +53,6 @@ module.exports = {
 				icon,
 			},
 		},
-
-		"gatsby-plugin-zopfli",
 
 		"gatsby-plugin-offline",
 

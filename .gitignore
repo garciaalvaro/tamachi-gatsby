@@ -1,5 +1,6 @@
 .DS_Store
 .cache
 /content
+_todo.md
 node_modules
 public

@@ -56,11 +56,11 @@ Nested pages are created from folders with an `index.mdx` file, inside another p
 
 For example, from `content/pages/page-1/sub-page/index.mdx` a page will be created in the path `http://localhost:3000/page-1/sub-page`.
 
-### A pages/home/index.mdx page
+### A /pages/home/index.mdx page
 
 This page will be used for the home of the site. It needs a `title` and a `pages` array which includes the pages id that the home will link to. Check `content-demo/pages/home/index.mdx` to see an example.
 
-#### A configuration file (config.js)
+### A config.js configuration file
 
 This file defines the variables used in the project. It needs to export an object with the following properties:
 

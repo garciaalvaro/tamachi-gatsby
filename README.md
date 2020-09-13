@@ -21,6 +21,16 @@ From the root directory install the dependencies running: `npm install`
 
 ---
 
+## Screenshots
+
+<img src="docs/screenshot-1.png" width="700px" alt="Home page" />
+<img src="docs/screenshot-2.png" width="700px" alt="Single page" />
+<img src="docs/screenshot-3.png" width="700px" alt="Responsive layout" />
+<img src="docs/screenshot-4.png" width="700px" alt="Next page link" />
+<img src="docs/screenshot-5.png" width="700px" alt="Search results" />
+
+---
+
 ## Content
 
 The project comes with a predefined content folder `content-demo`, that can be used as an example of how to set your own content.
@@ -40,7 +50,7 @@ Pages are created from folders with an `index.mdx` file, inside `content/pages`.
 
 For example, from `content/pages/page-1/index.mdx` a page will be created in the path `http://localhost:3000/page-1`.
 
-#### Nested Pages
+#### Nested Page
 
 Nested pages are created from folders with an `index.mdx` file, inside another page in `content/pages`.
 
@@ -111,7 +121,7 @@ module.exports = {
 
 ---
 
-### Docker
+## Docker
 
 The project also comes with Docker configuration files, so it can be run using Docker. It uses the production version of the project so it can take some minutes to start. First it builds the files, then it starts the server. Make sure you have Docker installed.
 

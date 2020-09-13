@@ -10,6 +10,8 @@
 		"prebuild": "npm run test",
 		"build": "gatsby build",
 		"develop": "gatsby develop --port 3000",
+		"docker": "docker-compose up -d",
+		"docker:stop": "docker-compose down",
 		"serve": "gatsby serve --port 3000 -H 0.0.0.0",
 		"test": "npm run test:types && npm run test:lint && npm run test:prettier",
 		"test:types": "tsc",

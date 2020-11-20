@@ -9,13 +9,8 @@
 		"baseUrl": ".",
 		"skipLibCheck": true,
 		"paths": {
-			"@/*": [
-				"src/*"
-			]
+			"@/*": ["src/*"]
 		}
 	},
-	"include": [
-		"src",
-		"types"
-	]
+	"include": ["src", "types"]
 }

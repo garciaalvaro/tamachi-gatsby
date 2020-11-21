@@ -42,7 +42,7 @@ Please notice that the `content` folder is included in the `.gitignore` file, so
 
 The `content` folder needs the following elements:
 
-### A /pages folder
+### /pages folder
 
 This folder contains the pages of the site. To see an example of how this folder should look, check the `content-demo` folder. Each page needs a `title` and an optional `menu_title` which will be used instead of the title in the menu.
 
@@ -58,11 +58,11 @@ Nested pages are created from folders with an `index.mdx` file, inside another p
 
 For example, from `content/pages/page-1/sub-page/index.mdx` a page will be created in the path `http://localhost:3000/page-1/sub-page`.
 
-### A /pages/home/index.mdx page
+### /pages/home/index.mdx page
 
 This page will be used for the home of the site. It needs a `title` and a `pages` array which includes the pages id that the home will link to. Check `content-demo/pages/home/index.mdx` to see an example.
 
-### A config.js configuration file
+### config.js configuration file
 
 This file defines the variables used in the project. It needs to export an object with the following properties:
 
@@ -133,3 +133,4 @@ The project also comes with Docker configuration files, so it can be run using D
 - Run the command: `npm run docker` which will download and install the dependencies and set up the container
 - When finished, it will be available in http://localhost:3000
 - To stop the container run the command: `npm run docker:stop`
+- If the container needs to be built again, run the command `$ npm run docker:recreate`

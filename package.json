@@ -7,7 +7,7 @@
 	"private": true,
 	"scripts": {
 		"start": "npm run dev",
-		"prebuild": "npm run test",
+		"prebuild": "npm run test:types",
 		"build": "gatsby build",
 		"build:demo": "env USE_DEMO=1 npm run build",
 		"dev": "gatsby develop --port 3000",

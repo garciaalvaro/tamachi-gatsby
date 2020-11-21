@@ -13,7 +13,6 @@ dist
 public
 
 # npm related files and folders
-package-lock.json
 node_modules
 
 # Docker related files

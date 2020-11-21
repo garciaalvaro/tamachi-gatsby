@@ -12,14 +12,14 @@ From the root directory install the dependencies running: `npm install`
 
 ## Development
 
--   Start the development server: `npm start`
--   When the server is ready visit http://localhost:3000 in your browser
+- Start the development server: `npm start`
+- When the server is ready visit http://localhost:3000 in your browser
 
 ## Production
 
--   Build the production files into the public folder: `npm run build`
--   When the files are ready start the server: `npm run serve`
--   Visit http://localhost:3000 in your browser
+- Build the production files into the public folder: `npm run build`
+- When the files are ready start the server: `npm run serve`
+- Visit http://localhost:3000 in your browser
 
 ---
 
@@ -130,6 +130,6 @@ module.exports = {
 
 The project also comes with Docker configuration files, so it can be run using Docker. It uses the production version of the project so it can take some minutes to start. First it builds the files, then it starts the server. Make sure you have Docker installed.
 
--   Run the command: `npm run docker` which will download and install the dependencies and set up the container
--   When finished, it will be available in http://localhost:3000
--   To stop the container run the command: `npm run docker:stop`
+- Run the command: `npm run docker` which will download and install the dependencies and set up the container
+- When finished, it will be available in http://localhost:3000
+- To stop the container run the command: `npm run docker:stop`

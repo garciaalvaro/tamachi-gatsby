@@ -133,4 +133,4 @@ The project also comes with Docker configuration files, so it can be run using D
 - Run the command: `npm run docker` which will download and install the dependencies and set up the container
 - When finished, it will be available in http://localhost:3000
 - To stop the container run the command: `npm run docker:stop`
-- If the container needs to be built again, run the command `$ npm run docker:recreate`
+- If the container needs to be built again, run the command `npm run docker:recreate`

@@ -13,6 +13,7 @@
 		"dev": "gatsby develop --port 3000",
 		"dev:demo": "env USE_DEMO=1 npm run dev",
 		"docker": "docker-compose up -d",
+		"docker:recreate": "docker-compose down && docker-compose build --no-cache && docker-compose up",
 		"docker:stop": "docker-compose down",
 		"serve": "gatsby serve --port 3000 -H 0.0.0.0",
 		"test": "npm run test:types && npm run test:lint && npm run test:prettier",

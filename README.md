@@ -90,6 +90,9 @@ module.exports = {
 	use_breadcrumbs: true, // Breadcrumbs in the top of the page
 	use_next_page: true, // Next page link in the bottom of a page
 
+	// If the page root is under a path https://example.com/tamachi-gatsby
+	url_path: "tamachi-gatsby",
+
 	// The sidebar menu. Each element needs an id and an optional children array.
 	// To link to a page from the site use the page path starting with a slash /.
 	// For example, a page found in content/pages/page-1/sub-page has the id /page-1/sub-page

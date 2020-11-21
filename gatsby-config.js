@@ -1,6 +1,7 @@
 const config = require("./config");
 
 const {
+	url_path,
 	use_demo,
 	name,
 	description,
@@ -28,6 +29,8 @@ module.exports = {
 		use_next_page,
 		lang,
 	},
+
+	pathPrefix: url_path,
 
 	plugins: [
 		{

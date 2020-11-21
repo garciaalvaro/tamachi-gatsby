@@ -18,6 +18,7 @@ module.exports = {
 	},
 	use_breadcrumbs: true,
 	use_next_page: true,
+	url_path: "tamachi-gatsby",
 	menu: [
 		{
 			id: "/home",

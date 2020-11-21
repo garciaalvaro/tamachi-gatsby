@@ -20,7 +20,7 @@
 		"test:lint": "eslint \"**/*.{js,ts,tsx}\"",
 		"test:prettier": "prettier --check \"**/*.{js,ts,tsx,json,html}\"",
 		"prettier": "prettier --write \"**/*.{js,ts,tsx,json,html}\"",
-		"deploy": "gatsby build --prefix-paths && gh-pages -d public"
+		"deploy": "env USE_DEMO=1 gatsby build --prefix-paths && gh-pages -d public"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.21",

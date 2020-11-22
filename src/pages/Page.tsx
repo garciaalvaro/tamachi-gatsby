@@ -66,11 +66,16 @@ const Page: FunctionComponent<Props> = props => {
 
 	const { setMenu, menu } = useContext(Context);
 
-	const getPath = () =>
-		window.location.pathname.replace(
+	const getPath = () => {
+		if (!url_path_prefix) {
+			return window.location.pathname;
+		}
+
+		return window.location.pathname.replace(
 			new RegExp(`^/${url_path_prefix}`),
 			""
 		);
+	};
 
 	const ancestors = useRef(
 		ancestors_raw.edges.map(({ node }) => ({

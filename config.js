@@ -9,6 +9,7 @@ const config = use_demo
 
 module.exports = {
 	...config,
+	url_path_prefix: config.url_path_prefix || "",
 	menu_raw: config.menu,
 	use_demo,
 };

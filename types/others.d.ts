@@ -16,4 +16,5 @@ interface Config {
 	description: string;
 	use_breadcrumbs: boolean;
 	use_next_page: boolean;
+	url_path_prefix: string;
 }

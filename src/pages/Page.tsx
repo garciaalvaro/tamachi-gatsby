@@ -57,9 +57,20 @@ const Page: FunctionComponent<Props> = props => {
 		body,
 	} = page;
 
-	const { menu_raw, use_breadcrumbs, use_next_page } = config.siteMetadata;
+	const {
+		url_path_prefix,
+		menu_raw,
+		use_breadcrumbs,
+		use_next_page,
+	} = config.siteMetadata;
 
 	const { setMenu, menu } = useContext(Context);
+
+	const getPath = () =>
+		window.location.pathname.replace(
+			new RegExp(`^/${url_path_prefix}`),
+			""
+		);
 
 	const ancestors = useRef(
 		ancestors_raw.edges.map(({ node }) => ({
@@ -82,6 +93,7 @@ const Page: FunctionComponent<Props> = props => {
 					let children: Menu = [];
 					let children_id: Id[] = [];
 					let title = "";
+					const pathname = getPath();
 
 					let page_id =
 						page_id_raw[0] === "/"
@@ -92,8 +104,7 @@ const Page: FunctionComponent<Props> = props => {
 						!!children_page_id_obj &&
 						!!children_page_id_obj.find(
 							({ id: sibling_page_id }) =>
-								window.location.pathname ===
-								`/${sibling_page_id}`
+								pathname === `/${sibling_page_id}`
 						);
 
 					if (children_page_id_obj) {
@@ -122,8 +133,7 @@ const Page: FunctionComponent<Props> = props => {
 						page_id = "";
 					}
 
-					const is_active =
-						!!page_id && window.location.pathname === `/${page_id}`;
+					const is_active = !!page_id && pathname === `/${page_id}`;
 
 					return [
 						...acc,
@@ -145,6 +155,7 @@ const Page: FunctionComponent<Props> = props => {
 
 		setMenu(() => {
 			const menu_raw_parsed = JSON.parse(menu_raw) as MenuItemRaw[];
+			const pathname = getPath();
 
 			let menu = getItems(menu_raw_parsed, []);
 
@@ -152,7 +163,7 @@ const Page: FunctionComponent<Props> = props => {
 				...item,
 				submenu_is_open:
 					!!item.children_id.length &&
-					window.location.pathname.indexOf(`/${item.page_id}`) !== -1,
+					pathname.indexOf(`/${item.page_id}`) !== -1,
 			}));
 
 			return menu;
@@ -162,7 +173,9 @@ const Page: FunctionComponent<Props> = props => {
 	useEffect(() => {
 		if (!menu.length) return;
 
-		const active_item_parent_path = window.location.pathname
+		const pathname = getPath();
+
+		const active_item_parent_path = pathname
 			.split("/")
 			.slice(1, -1)
 			.join("/");
@@ -171,12 +184,11 @@ const Page: FunctionComponent<Props> = props => {
 			menu = menu.map(item => {
 				const { page_id } = item;
 
-				const is_active =
-					!!page_id && window.location.pathname === `/${page_id}`;
+				const is_active = !!page_id && pathname === `/${page_id}`;
 
 				const submenu_is_open =
 					!!item.children_id.length &&
-					window.location.pathname.indexOf(`/${item.page_id}`) !== -1;
+					pathname.indexOf(`/${item.page_id}`) !== -1;
 
 				const sibling_is_active =
 					item.page_id.split("/").slice(0, -1).join("/") ===
@@ -253,6 +265,7 @@ export const query = graphql`
 				menu_raw
 				use_breadcrumbs
 				use_next_page
+				url_path_prefix
 			}
 		}
 	}

@@ -20,16 +20,6 @@ interface GraphqlQuery {
 	};
 }
 
-const LayoutContainer: FunctionComponent<Props> = props => {
-	const { path } = props;
-
-	return (
-		<ContextProvider path={path}>
-			<Layout {...props}>{props.children}</Layout>
-		</ContextProvider>
-	);
-};
-
 const Layout: FunctionComponent<Props> = props => {
 	const is_home = props.path === "/";
 
@@ -72,6 +62,16 @@ const Layout: FunctionComponent<Props> = props => {
 				{!is_home && <Sidebar />}
 			</App>
 		</Fragment>
+	);
+};
+
+const LayoutContainer: FunctionComponent<Props> = props => {
+	const { path } = props;
+
+	return (
+		<ContextProvider path={path}>
+			<Layout {...props}>{props.children}</Layout>
+		</ContextProvider>
 	);
 };
 

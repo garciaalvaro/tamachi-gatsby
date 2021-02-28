@@ -18,6 +18,7 @@
 	display flex
 	position relative
 	transition transform .2s $e_deceleration
+	backface-visibility hidden
 
 	&:before
 		content ""
@@ -30,7 +31,8 @@
 		opacity .2
 
 	&:hover
-		transform translateX(-.4rem)
+		transition transform .35s .1s $e_deceleration
+		transform translateX(.4rem)
 
 	&.is_active
 		font-weight 500

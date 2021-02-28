@@ -12,3 +12,10 @@
 
 	.responsive
 		grid-template-columns 100%
+
+	div.container
+
+		:global(.gatsby-resp-image-wrapper)
+
+			+ :global(.gatsby-resp-image-wrapper)
+				margin-top 0

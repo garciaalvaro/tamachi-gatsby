@@ -17,7 +17,7 @@ export const Columns: FunctionComponent<Props> = props => {
 				styles.container,
 				responsive !== false ? styles.responsive : null,
 			])}
-			style={{ columnGap: column_gap }}
+			style={{ columnGap: column_gap, rowGap: column_gap }}
 		>
 			{props.children}
 		</div>

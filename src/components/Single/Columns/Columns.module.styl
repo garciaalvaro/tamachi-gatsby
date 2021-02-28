@@ -4,9 +4,10 @@
 
 .container
 	display grid
-	grid-template-columns repeat(auto-fit, minmax(0, 1fr))
+	grid-template-columns repeat(auto-fit, minmax(15rem, auto))
+	column-gap 2.5rem
 
 @media screen and (max-width: 600px)
 
 	.responsive
-		grid-template-columns 1fr
+		grid-template-columns 100%

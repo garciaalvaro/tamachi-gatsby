@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import Scrollbar from "react-scrollbars-custom";
 
-import styles from "./Main.module.styl";
+import * as styles from "./Main.module.styl";
 import { Context } from "@/context";
 
 export const Main: FunctionComponent = props => {

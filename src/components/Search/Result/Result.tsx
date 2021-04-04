@@ -1,7 +1,7 @@
 import React, { useEffect, useState, FunctionComponent } from "react";
 import { Link } from "gatsby";
 
-import styles from "./Result.module.styl";
+import * as styles from "./Result.module.styl";
 import { NavigationBreadcrumbs } from "@/components/NavigationBreadcrumbs";
 import { getSearchResultMatches as getMatches } from "@/utils";
 

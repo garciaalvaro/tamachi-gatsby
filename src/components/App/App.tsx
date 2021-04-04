@@ -6,7 +6,7 @@ import React, {
 } from "react";
 
 import "./App.styl";
-import styles from "./App.module.styl";
+import * as styles from "./App.module.styl";
 import { Context } from "@/context";
 import { ColorSchemeToggle } from "../ColorSchemeToggle";
 import { Search } from "../Search";

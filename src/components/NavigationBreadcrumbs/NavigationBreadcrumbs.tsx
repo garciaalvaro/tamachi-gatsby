@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import styles from "./NavigationBreadcrumbs.module.styl";
+import * as styles from "./NavigationBreadcrumbs.module.styl";
 import { NavigationBreadcrumbsItem } from "./NavigationBreadcrumbsItem";
 
 interface Props {

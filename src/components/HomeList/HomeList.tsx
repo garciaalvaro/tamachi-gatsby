@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
 
-import styles from "./HomeList.module.styl";
+import * as styles from "./HomeList.module.styl";
 
 interface Props {
 	items: { id: PageId; title: PageTitle }[];

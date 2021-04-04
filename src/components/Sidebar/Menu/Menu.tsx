@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useContext } from "react";
 
-import styles from "./Menu.module.styl";
+import * as styles from "./Menu.module.styl";
 import { MenuItem } from "../MenuItem";
 import { Context } from "@/context";
 

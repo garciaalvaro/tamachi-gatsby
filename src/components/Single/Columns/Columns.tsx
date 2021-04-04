@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import styles from "./Columns.module.styl";
+import * as styles from "./Columns.module.styl";
 import { className } from "@/utils";
 
 interface Props {

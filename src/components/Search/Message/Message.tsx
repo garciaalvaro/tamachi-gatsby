@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useLayoutEffect } from "react";
 
-import styles from "./Message.module.styl";
+import * as styles from "./Message.module.styl";
 
 interface Props {
 	query?: string;

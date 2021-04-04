@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import { Link } from "gatsby";
 
-import styles from "./MenuItem.module.styl";
+import * as styles from "./MenuItem.module.styl";
 import { SubMenu } from "../SubMenu";
 import { Context } from "@/context";
 import { Icon, className } from "@/utils";

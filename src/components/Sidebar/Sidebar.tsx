@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import Scrollbar from "react-scrollbars-custom";
 
-import styles from "./Sidebar.module.styl";
+import * as styles from "./Sidebar.module.styl";
 import { Context } from "@/context";
 import { Menu } from "./Menu";
 import { ToggleButton } from "./ToggleButton";

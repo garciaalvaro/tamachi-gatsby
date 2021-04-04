@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, FunctionComponent } from "react";
 import copy from "copy-text-to-clipboard";
 
-import styles from "./Code.module.styl";
+import * as styles from "./Code.module.styl";
 import { className as classNameUtil } from "@/utils";
 
 interface Props {

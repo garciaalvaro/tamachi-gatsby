@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import styles from "./ToggleButton.module.styl";
+import * as styles from "./ToggleButton.module.styl";
 import { Icon, className } from "@/utils";
 
 interface Props {

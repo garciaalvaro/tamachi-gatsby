@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, FunctionComponent } from "react";
 
-import styles from "./InputField.module.styl";
+import * as styles from "./InputField.module.styl";
 
 interface Props {
 	query: string;

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import styles from "./SubMenu.module.styl";
+import * as styles from "./SubMenu.module.styl";
 import { MenuItem } from "../MenuItem";
 import { className } from "@/utils";
 

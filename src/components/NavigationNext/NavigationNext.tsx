@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import { Link } from "gatsby";
 
-import styles from "./NavigationNext.module.styl";
+import * as styles from "./NavigationNext.module.styl";
 import { Context } from "@/context";
 
 export const NavigationNext: FunctionComponent = () => {

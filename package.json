@@ -7,9 +7,9 @@
 	"private": true,
 	"scripts": {
 		"start": "npm run dev",
-		"prebuild": "npm run test:types",
-		"build": "gatsby build",
-		"build:demo": "env USE_DEMO=yes npm run build",
+		"build": "npm run clean && npm run test && gatsby build",
+		"build:demo": "npm run clean && npm run test && env USE_DEMO=yes gatsby build --prefix-paths",
+		"clean": "rm -rf public",
 		"dev": "gatsby develop --port 3000",
 		"dev:demo": "env USE_DEMO=yes npm run dev",
 		"docker": "docker-compose up -d",
@@ -21,8 +21,7 @@
 		"test:lint": "eslint \"**/*.{js,ts,tsx}\"",
 		"test:prettier": "prettier --check \"**/*.{js,ts,tsx,json,html}\"",
 		"prettier": "prettier --write \"**/*.{js,ts,tsx,json,html}\"",
-		"predeploy": "rm -rf public",
-		"deploy": "env USE_DEMO=yes gatsby build --prefix-paths && gh-pages -d public"
+		"deploy": "npm run build:demo && gh-pages -d public"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",

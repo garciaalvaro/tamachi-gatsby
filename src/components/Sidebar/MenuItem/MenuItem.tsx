@@ -54,12 +54,12 @@ export const MenuItem: FunctionComponent<MenuItem> = props => {
 	return (
 		<li className={styles.container}>
 			<div
-				className={className([
-					styles.header,
-					is_active ? styles.is_active : null,
-					sibling_is_active ? styles.sibling_is_active : null,
-					path.length === 0 ? styles.is_root : null,
-				])}
+				className={className({
+					[styles.header]: true,
+					[styles.is_active]: is_active,
+					[styles.sibling_is_active]: sibling_is_active,
+					[styles.is_root]: path.length === 0,
+				})}
 			>
 				{is_page && (
 					<Link

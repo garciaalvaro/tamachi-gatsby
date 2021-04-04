@@ -41,10 +41,11 @@ export const Sidebar: FunctionComponent = () => {
 	return (
 		<Fragment>
 			<nav
-				className={className([
-					styles.container,
-					is_open ? styles.is_open : styles.is_closed,
-				])}
+				className={className({
+					[styles.container]: true,
+					[styles.is_open]: is_open,
+					[styles.is_closed]: !is_open,
+				})}
 			>
 				<Scrollbar>
 					<Menu />

@@ -13,10 +13,10 @@ export const Columns: FunctionComponent<Props> = props => {
 
 	return (
 		<div
-			className={className([
-				styles.container,
-				responsive !== false ? styles.responsive : null,
-			])}
+			className={className({
+				[styles.container]: true,
+				[styles.responsive]: responsive !== false,
+			})}
 			style={{ columnGap: column_gap, rowGap: column_gap }}
 		>
 			{props.children}

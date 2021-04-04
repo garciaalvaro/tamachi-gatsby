@@ -14,10 +14,10 @@ export const SubMenu: FunctionComponent<Props> = props => {
 
 	return (
 		<ul
-			className={className([
-				styles.container,
-				is_open ? styles.is_open : styles.is_closed,
-			])}
+			className={className({
+				[styles.container]: true,
+				[styles.is_closed]: !is_open,
+			})}
 		>
 			{items.map(item => (
 				<MenuItem key={item.id} {...item} />

@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, FunctionComponent } from "react";
 import copy from "copy-text-to-clipboard";
 
 import * as styles from "./Code.module.styl";
-import { className as classNameUtil } from "@/utils";
+import { className } from "@/utils";
 
 interface Props {
 	className: string;
@@ -21,10 +21,9 @@ const getLanguage = (className: string) => {
 };
 
 export const Code: FunctionComponent<Props> = props => {
-	const { className } = props;
 	const $pre = useRef<HTMLPreElement | null>(null);
 	const $button = useRef<HTMLButtonElement | null>(null);
-	const language = useRef(getLanguage(className));
+	const language = useRef(getLanguage(props.className));
 	const [just_copied, setJustCopied] = useState(false);
 
 	useEffect(() => {
@@ -35,10 +34,7 @@ export const Code: FunctionComponent<Props> = props => {
 
 	return (
 		<div
-			className={classNameUtil([
-				styles.container,
-				styles.prismTomorrow_night,
-			])}
+			className={className(styles.container, styles.prismTomorrow_night)}
 		>
 			<pre ref={$pre} {...props} />
 
@@ -50,10 +46,10 @@ export const Code: FunctionComponent<Props> = props => {
 
 			<button
 				ref={$button}
-				className={classNameUtil([
-					styles.button,
-					just_copied ? styles.justCopied : "",
-				])}
+				className={className({
+					[styles.button]: true,
+					[styles.justCopied]: just_copied,
+				})}
 				onClick={() => {
 					if (!$pre.current) return;
 

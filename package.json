@@ -9,9 +9,9 @@
 		"start": "npm run dev",
 		"prebuild": "npm run test:types",
 		"build": "gatsby build",
-		"build:demo": "env USE_DEMO=1 npm run build",
+		"build:demo": "env USE_DEMO=yes npm run build",
 		"dev": "gatsby develop --port 3000",
-		"dev:demo": "env USE_DEMO=1 npm run dev",
+		"dev:demo": "env USE_DEMO=yes npm run dev",
 		"docker": "docker-compose up -d",
 		"docker:recreate": "docker-compose down && docker-compose build --no-cache && docker-compose up",
 		"docker:stop": "docker-compose down",
@@ -22,7 +22,7 @@
 		"test:prettier": "prettier --check \"**/*.{js,ts,tsx,json,html}\"",
 		"prettier": "prettier --write \"**/*.{js,ts,tsx,json,html}\"",
 		"predeploy": "rm -rf public",
-		"deploy": "env USE_DEMO=1 gatsby build --prefix-paths && gh-pages -d public"
+		"deploy": "env USE_DEMO=yes gatsby build --prefix-paths && gh-pages -d public"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",

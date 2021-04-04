@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Fuse from "fuse.js";
 import removeMd from "remove-markdown";
 
-import styles from "./Search.module.styl";
+import * as styles from "./Search.module.styl";
 import { ToggleButton } from "./ToggleButton";
 import { InputField } from "./InputField";
 import { Results } from "./Results";

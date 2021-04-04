@@ -1,4 +1,4 @@
-import React, { useState, FunctionComponent, useLayoutEffect } from "react";
+import React, { useState, FunctionComponent, useEffect } from "react";
 
 import { Context, initial_props } from "./Context";
 import { getColorScheme } from "@/utils";
@@ -15,9 +15,9 @@ export const ContextProvider: FunctionComponent<Props> = props => {
 	);
 
 	// We need to set the color in the browser so we call it
-	// in the first render using useLayoutEffect, so it is
+	// in the first render using useEffect, so it is
 	// executed before the page is painted.
-	useLayoutEffect(() => setColor(getColorScheme()), []);
+	useEffect(() => setColor(getColorScheme()), []);
 
 	return (
 		<Context.Provider

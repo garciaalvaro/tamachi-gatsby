@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
-import styles from "./Results.module.styl";
+import * as styles from "./Results.module.styl";
 import { Result } from "../Result";
 import { Message } from "../Message";
 

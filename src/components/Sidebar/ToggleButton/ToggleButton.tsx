@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import styles from "./ToggleButton.module.styl";
+import * as styles from "./ToggleButton.module.styl";
 import { Icon, className } from "@/utils";
 
 interface Props {
@@ -13,10 +13,10 @@ export const ToggleButton: FunctionComponent<Props> = props => {
 
 	return (
 		<button
-			className={className([
-				styles.container,
-				is_open ? styles.is_open : styles.is_closed,
-			])}
+			className={className({
+				[styles.container]: true,
+				[styles.is_open]: is_open,
+			})}
 			onClick={toggle}
 			aria-label="Toggle sidebar"
 		>

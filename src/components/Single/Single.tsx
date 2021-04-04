@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 
-import styles from "./Single.module.styl";
+import * as styles from "./Single.module.styl";
 import { NavigationBreadcrumbs } from "../NavigationBreadcrumbs";
 import { NavigationNext } from "../NavigationNext";
 import { Code } from "./Code";

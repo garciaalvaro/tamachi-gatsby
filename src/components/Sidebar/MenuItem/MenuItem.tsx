@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import { Link } from "gatsby";
 
-import styles from "./MenuItem.module.styl";
+import * as styles from "./MenuItem.module.styl";
 import { SubMenu } from "../SubMenu";
 import { Context } from "@/context";
 import { Icon, className } from "@/utils";
@@ -54,12 +54,12 @@ export const MenuItem: FunctionComponent<MenuItem> = props => {
 	return (
 		<li className={styles.container}>
 			<div
-				className={className([
-					styles.header,
-					is_active ? styles.is_active : null,
-					sibling_is_active ? styles.sibling_is_active : null,
-					path.length === 0 ? styles.is_root : null,
-				])}
+				className={className({
+					[styles.header]: true,
+					[styles.is_active]: is_active,
+					[styles.sibling_is_active]: sibling_is_active,
+					[styles.is_root]: path.length === 0,
+				})}
 			>
 				{is_page && (
 					<Link

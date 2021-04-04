@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import styles from "./Container.module.styl";
+import * as styles from "./Container.module.styl";
 import { className } from "@/utils";
 
 interface Props {
@@ -15,11 +15,11 @@ export const Container: FunctionComponent<Props> = props => {
 
 	return (
 		<div
-			className={className([
-				full_width ? styles.full_width : null,
-				use_border ? styles.use_border : null,
-				center ? styles.center : null,
-			])}
+			className={className({
+				[styles.full_width]: !!full_width,
+				[styles.use_border]: !!use_border,
+				[styles.center]: !!center,
+			})}
 			style={{ maxWidth: max_width }}
 		>
 			{props.children}

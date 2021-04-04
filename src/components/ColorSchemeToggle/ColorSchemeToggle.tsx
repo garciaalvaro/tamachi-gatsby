@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useContext } from "react";
 
-import styles from "./ColorSchemeToggle.module.styl";
+import * as styles from "./ColorSchemeToggle.module.styl";
 import { Context } from "@/context";
 import { Icon } from "@/utils";
 

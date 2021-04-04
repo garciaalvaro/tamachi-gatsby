@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import Scrollbar from "react-scrollbars-custom";
 
-import styles from "./Sidebar.module.styl";
+import * as styles from "./Sidebar.module.styl";
 import { Context } from "@/context";
 import { Menu } from "./Menu";
 import { ToggleButton } from "./ToggleButton";
@@ -41,10 +41,11 @@ export const Sidebar: FunctionComponent = () => {
 	return (
 		<Fragment>
 			<nav
-				className={className([
-					styles.container,
-					is_open ? styles.is_open : styles.is_closed,
-				])}
+				className={className({
+					[styles.container]: true,
+					[styles.is_open]: is_open,
+					[styles.is_closed]: !is_open,
+				})}
 			>
 				<Scrollbar>
 					<Menu />

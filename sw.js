@@ -27,26 +27,23 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7a7eaf6fb82cc22803c5.js"
+    "url": "webpack-runtime-342b6fee0ebeefe13dba.js"
   },
   {
-    "url": "styles.3d54b338a00178f45eb3.css"
+    "url": "styles.358e9b7db7e31f897b09.css"
   },
   {
-    "url": "styles-407fe62976dc5310c43e.js"
+    "url": "framework-3e7c164a12f2f5e560d3.js"
   },
   {
-    "url": "framework-5e01c8af6b1735c9eaa3.js"
-  },
-  {
-    "url": "app-ae584ac14e6181303e02.js"
+    "url": "app-219206c41c8288f4b19b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5cbbe1cafaa0990a196c36e1a60bc18d"
+    "revision": "5a320bf10a890866336e075e3d203114"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-8033a24e61cb6e6f32a5.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-d77cf0f60a9408965108.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -54,7 +51,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1054562906.json",
-    "revision": "79ab4bcc7afb09e7838f5773d3d76ce0"
+    "revision": "33bd65be51da116e8f92a705c8726ae0"
   },
   {
     "url": "page-data/sq/d/3122289836.json",
@@ -62,10 +59,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c37f8c4d4b7949cd29523d3997d18317"
+    "revision": "fdca31dc775a44c58c196c15d4e16def"
   },
   {
-    "url": "polyfill-9e9c796164da25fa8bfb.js"
+    "url": "polyfill-9c6ccb8b2a14e4ca3356.js"
   },
   {
     "url": "manifest.webmanifest",
@@ -161,7 +158,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/tamachi-gatsby/app-ae584ac14e6181303e02.js`))) {
+  if (!resources || !(await caches.match(`/tamachi-gatsby/app-219206c41c8288f4b19b.js`))) {
     return await fetch(event.request)
   }
 

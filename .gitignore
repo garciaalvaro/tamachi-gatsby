@@ -5,3 +5,4 @@
 _todo.md
 node_modules
 public
+tests/cypress

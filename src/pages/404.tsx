@@ -10,11 +10,7 @@ interface GraphqlQuery {
 }
 
 const Error404: FunctionComponent = () => {
-	const {
-		config: {
-			siteMetadata: { labels },
-		},
-	} = useStaticQuery<GraphqlQuery>(graphql`
+	const { labels } = useStaticQuery<GraphqlQuery>(graphql`
 		query {
 			config: site {
 				siteMetadata {
@@ -29,7 +25,7 @@ const Error404: FunctionComponent = () => {
 				}
 			}
 		}
-	`);
+	`).config.siteMetadata;
 
 	return (
 		<Single

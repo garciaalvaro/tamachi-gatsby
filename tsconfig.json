@@ -10,7 +10,8 @@
 		"skipLibCheck": true,
 		"paths": {
 			"@/*": ["src/*"]
-		}
+		},
+		"types": ["cypress", "jest"]
 	},
-	"include": ["src", "types"]
+	"include": ["src", "types", "tests"]
 }

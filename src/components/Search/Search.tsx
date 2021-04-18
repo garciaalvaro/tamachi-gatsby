@@ -36,9 +36,7 @@ export const Search: FunctionComponent = () => {
 		setQuery("");
 	};
 
-	const {
-		allMdx: { nodes: pages_data },
-	} = useStaticQuery<GraphqlQuery>(graphql`
+	const pages_data = useStaticQuery<GraphqlQuery>(graphql`
 		query {
 			allMdx {
 				nodes {
@@ -53,7 +51,7 @@ export const Search: FunctionComponent = () => {
 				}
 			}
 		}
-	`);
+	`).allMdx.nodes;
 
 	useEffect(() => {
 		// If Fuse has already been set
@@ -73,7 +71,6 @@ export const Search: FunctionComponent = () => {
 					{
 						page_id: fields.id,
 						ancestors: getAncestors(
-							fields.id,
 							fields.ancestors_id,
 							pages_data
 						),

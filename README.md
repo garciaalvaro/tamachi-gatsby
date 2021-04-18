@@ -13,7 +13,7 @@ Currently there is a mismatch with an outdated peerDependency of a package, whic
 
 ## Test
 
-The project comes with several end to end tests as well unit tests.
+The project comes with several end to end tests as well as unit tests.
 To run type checking, linting, unit tests, e2e tests and code syntax check run: `npm test`
 
 ## Development

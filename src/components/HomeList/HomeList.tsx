@@ -13,7 +13,7 @@ export const HomeList: FunctionComponent<Props> = props => {
 	return (
 		<ul className={styles.container}>
 			{[...items].map(({ id, title }) => (
-				<li key={id} className={styles.item}>
+				<li key={id} className={styles.item} data-testid="article">
 					{id === "home" ? (
 						<h1>
 							<Link to="/">{title}</Link>

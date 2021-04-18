@@ -8,7 +8,13 @@ This project is a documentation/blogging Gatsby site built in TypeScript using R
 
 ## Installation
 
-From the root directory install the dependencies running: `npm install`
+From the root directory install the dependencies running: `npm install --force`.
+Currently there is a mismatch with an outdated peerDependency of a package, which accepts React version 17.
+
+## Test
+
+The project comes with several end to end tests as well unit tests.
+To run type checking, linting, unit tests, e2e tests and code syntax check run: `npm test`
 
 ## Development
 

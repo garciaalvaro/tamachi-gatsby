@@ -71,7 +71,6 @@ export const Search: FunctionComponent = () => {
 					{
 						page_id: fields.id,
 						ancestors: getAncestors(
-							fields.id,
 							fields.ancestors_id,
 							pages_data
 						),

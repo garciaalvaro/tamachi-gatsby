@@ -1,5 +1,4 @@
 export const getAncestors = (
-	page_id: PageId,
 	ancestors_page_id: PageId[],
 	items: SearchResultRaw[]
 ): PageLink[] =>

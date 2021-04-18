@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:15-alpine
 
 # Create the folder and change the working directory.
 # Any command from now will run in this directory.

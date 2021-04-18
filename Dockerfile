@@ -1,23 +1,22 @@
 FROM node:15-alpine
+ENV NODE_ENV=production
 
-# Create the folder and change the working directory.
-# Any command from now will run in this directory.
-WORKDIR /usr/src/app
+# Change working directory, any command from now will run in this directory
+WORKDIR /app
 
 # Copy package.json
-COPY package*.json ./
+COPY package.json ./
 
 # Install packages
-RUN npm install
+RUN npm install --force --production
 
 # Copy the other files and folders
 COPY . .
 
-# Build the app
-RUN npm run build
-
 # Expose port
 EXPOSE 3000
 
-# Start the server
-CMD npm run serve
+# Run the npm script which will:
+# - Build the production files
+# - Start the server
+CMD npm run build && npm run serve

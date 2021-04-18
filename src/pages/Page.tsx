@@ -66,6 +66,8 @@ const Page: FunctionComponent<Props> = props => {
 
 	const { setMenu, menu } = useContext(Context);
 
+	const menu_is_ready = useRef(false);
+
 	const getPath = () => {
 		if (!url_path_prefix) {
 			return window.location.pathname;
@@ -176,7 +178,9 @@ const Page: FunctionComponent<Props> = props => {
 	}, []);
 
 	useEffect(() => {
-		if (!menu.length) return;
+		if (!menu.length || menu_is_ready.current) return;
+
+		menu_is_ready.current = true;
 
 		const pathname = getPath();
 
@@ -211,7 +215,7 @@ const Page: FunctionComponent<Props> = props => {
 
 			return menu;
 		});
-	}, []);
+	}, [menu]);
 
 	return (
 		<Single

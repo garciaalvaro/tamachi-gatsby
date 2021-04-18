@@ -24,9 +24,10 @@ const Layout: FunctionComponent<Props> = props => {
 	const is_home = props.path === "/";
 
 	const {
-		config: {
-			siteMetadata: { lang, title, description, labels },
-		},
+		lang,
+		title,
+		description,
+		labels,
 	} = useStaticQuery<GraphqlQuery>(graphql`
 		query {
 			config: site {
@@ -42,7 +43,7 @@ const Layout: FunctionComponent<Props> = props => {
 				}
 			}
 		}
-	`);
+	`).config.siteMetadata;
 
 	return (
 		<Fragment>

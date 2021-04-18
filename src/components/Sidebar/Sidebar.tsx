@@ -46,6 +46,7 @@ export const Sidebar: FunctionComponent = () => {
 					[styles.is_open]: is_open,
 					[styles.is_closed]: !is_open,
 				})}
+				data-testid="sidebar"
 			>
 				<Scrollbar>
 					<Menu />

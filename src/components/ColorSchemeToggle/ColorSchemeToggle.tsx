@@ -12,6 +12,7 @@ export const ColorSchemeToggle: FunctionComponent = () => {
 			className={styles.container}
 			onClick={() => setColor(color === "light" ? "dark" : "light")}
 			aria-label="Toggle color scheme"
+			data-testid="color-scheme-toggle"
 		>
 			<Icon icon={color === "light" ? "moon" : "sun"} />
 		</button>

@@ -32,7 +32,10 @@ export const App: FunctionComponent<Props> = props => {
 	}
 
 	return (
-		<div className={className(styles.container, styles[color])}>
+		<div
+			className={className(styles.container, styles[color])}
+			data-testid="root"
+		>
 			{props.children}
 
 			<ColorSchemeToggle />

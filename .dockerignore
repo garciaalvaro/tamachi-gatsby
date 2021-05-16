@@ -15,6 +15,9 @@ public
 # npm related files and folders
 node_modules
 
+# content demo files and folders
+content-demo
+
 # Docker related files
 .dockerignore
 Dockerfile
